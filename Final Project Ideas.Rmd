@@ -1,0 +1,108 @@
+---
+title: "Final Project Ideas"
+author: "Chuyue BIAN, Eunha Kim & Jean Pierre Barriga Sarango"
+date: "2025-10-08"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Project Idea 1
+
+### Question
+How have repeated U.S. debt ceiling crises and fiscal instability affected global confidence in the U.S. dollar system between 2000 and 2025? Specifically, does political brinkmanship over federal debt correlate with measurable changes in indicators of dollar dominance—such as the share of global reserves held in USD, foreign holdings of U.S. government debt, and Treasury yield spreads?
+
+### Why It Is Important
+The U.S. dollar’s global dominance underpins the international financial order. Yet, recurring political standoffs over the debt ceiling, credit rating downgrades, and rising fiscal pressures may undermine trust in U.S. financial credibility. Understanding whether these events have tangible effects on global confidence in the dollar is crucial for anticipating shifts in the international monetary system and potential diversification toward alternative reserve currencies (such as the euro or renminbi).
+
+### Potential Datasets
+This project will combine several publicly available macro-financial datasets:
+
+- **[IMF COFER dataset](https://data.imf.org/en/datasets/IMF.STA%3ACOFER?utm_source=chatgpt.com):**  
+  Global currency composition of official foreign exchange reserves.
+
+- **[U.S. Treasury TIC data](https://home.treasury.gov/data/treasury-international-capital-tic-system?utm_source=chatgpt.com):**  
+  Data on foreign holdings of U.S. Treasury securities.
+
+- **[FRED – Federal Reserve Economic Data](https://fred.stlouisfed.org/?utm_source=chatgpt.com):**  
+  - [Foreign Holdings of Federal Debt (FDHBFIN)](https://fred.stlouisfed.org/series/FDHBFIN?utm_source=chatgpt.com)  
+  - [10-Year Treasury Yield (DGS10)](https://fred.stlouisfed.org/series/DGS10?utm_source=chatgpt.com)  
+  - [Yield Spread (10Y–2Y, T10Y2Y)](https://fred.stlouisfed.org/series/T10Y2Y?utm_source=chatgpt.com)  
+  - [Treasury Constant Maturity Rates (all maturities)](https://fred.stlouisfed.org/categories/115?utm_source=chatgpt.com)
+
+### Analysis Plan
+Using **R**, we will construct a time-series dataset from 2000–2025 covering major fiscal and political shocks (e.g., 2011 debt ceiling crisis, 2013 government shutdown, 2023 standoff).  
+
+Analyses will include:
+
+- **Descriptive Statistics:**  
+  Visualization of trends in foreign confidence indicators (e.g., USD share of reserves, foreign debt holdings, yield spreads).
+
+- **Event-Study Regression:**  
+  Estimating short-term impacts of debt ceiling events on yields and reserve composition.
+
+- **Correlation Analysis:**  
+  Measuring associations between U.S. fiscal shocks and shifts in dollar reserve share or foreign holdings.
+
+This empirical analysis will help determine whether U.S. fiscal instability produces measurable erosion in the dollar’s global dominance.
+
+
+## Project Idea 2
+
+### Question
+How does family policy legislation impact birth rates? 
+
+### Why It Is Important
+In recent years, family policies such as paid parental leave and childcare have been increasingly enacted across U.S. states. Family policy legislation may have a positive impact on individuals’ fertility intentions, as it can alleviate the childcare burden of working parents and reduce the financial costs associated with childbearing. From a national perspective, family-related legislation is also regarded as a tool to stabilize reproduction. Therefore, this study will examine how family policy legislation affects birth rates, using cross-state variation. Since each state has enacted different numbers and types of family policy legislation, such variation is likely to result in differences in birth rates across states.  
+
+### Potential Datasets
+To compile information on state-level family policy legislation: 
+
+- **[Open States]** 
+
+- **[NCSL Early Childhood Legislation Database]**  
+
+- **[NCSL Child Welfare Enacted Database]**  
+
+For birth rate data:
+
+- **[CDC NCHS Natality Data ]** 
+
+
+### Analysis Plan
+Using **R**, we will perform:   
+
+- **Descriptive Statistics:**  
+  State-by-year variations in the number of family policy laws enacted and birth rates
+
+- **Causal inference approaches:**  
+  Estimating causal effects of family policy legislation using difference-in-differences or fixed effects models.
+
+
+# Project Idea 3
+
+### Question
+Are "productive politicians"  more likely to be reelected? Can we create a pass/fail legislation rate by politician? As midterms approach, constituents' electoral decisions will have implications on the future of the United States' economy, democracy and security. By creating a productivity metric on politicians, we would be using data science to democratize insights to better inform voters. We could look at congressional data in order to identify the bills that were introduced to the house floor and the sponsors / co-sponsors to identify which politicians are leading the charge to get the bill passed. This analysis would rely on descriptive statistics to describe the historical performance of politicians.
+
+### Why It Is Important
+As midterms approach, constituents' electoral decisions will have implications on the future of the United States' economy, democracy and security. By creating a productivity metric on politicians, we would be using data science to democratize insights to better inform voters.
+
+### Potential Datasets
+- **Congressional data:** Identify bills introduced to the House floor, their sponsors and co-sponsors.  
+- **Legislation outcomes:** Measure success rates (pass/fail) by politician across sessions.  
+- **Electoral data:** Combine re-election outcomes to test whether productivity predicts voter support.
+
+### Analysis Plan
+Using **R**, we will perform:
+
+- **Descriptive Statistics:**  
+  Summarize legislative productivity (e.g., number of bills introduced, passed, and co-sponsored).  
+
+- **Productivity Metric Construction:**  
+  Create a “pass rate” or success ratio per politician.  
+
+- **Exploratory Correlation Analysis:**  
+  Examine associations between productivity measures and re-election outcomes.  
+
+This analysis would rely primarily on descriptive statistics to describe the historical performance of politicians and assess whether productive politicians are more likely to be re-elected.
