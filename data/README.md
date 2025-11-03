@@ -15,7 +15,7 @@ This dataset is used to analyze whether the 2010 Supreme Court ruling Citizens U
 Specifically, we examine changes in DW-NOMINATE Dim1 (economic redistribution ideology) before and after the ruling (comparing pre-2010 and post-2010 Congresses).
 
 
-Dataset 2: Federal Election Commission – Super PAC Expenditures (all_superpac.rds)
+Dataset 2: all_superpac.rds
 
 Dataset: Federal Election Commission – Super PAC Expenditures
 File used: all_superpac.rds
