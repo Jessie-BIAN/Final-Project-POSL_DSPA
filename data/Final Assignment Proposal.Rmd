@@ -1,0 +1,79 @@
+---
+title: "Final Assignment Proposal"
+author: "Jean Pierre Barriga Sarango, Eunha Kim & Chuyue Bian"
+date: "2025-11-01"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+fontsize: 12pt
+mainfont: Times New Roman
+---
+## Research Question
+
+How Super PAC Independent Expenditure impacts political polarization in the Senate?
+
+## Hypothesis (V1.0)
+
+**Hypothesis:**  
+Super PAC independent expenditures have increased the level of political polarization in the Senate compared to pre-2010 sessions.
+
+
+## Variables
+
+**Outcome Variable (Y):**  
+Level of political polarization between politicians (using *nominate_dim1*[^1] variable).  
+
+- *nominate_dim1* is an individual politician-level variable (how liberal or conservative they are in economic terms).  
+- Consider calculating the level of variation (or polarization) for each Congress.
+
+**Predictor Variables:**
+
+- Size of Super PAC Independent Expenditures  
+- Count of Super PAC Independent Expenditures per Campaign Cycle (FEC)  
+- Proportion of Campaign Funds that come from Super PACs  
+  - *E.g.* 25% of candidate X’s funds from Super PACs
+
+**Confounding Variables:**
+
+- How did their district vote according to party lines?  
+  - Proportion of vote shares for the winning candidate  
+- Party affiliation  
+- Change in party (Vote View)
+
+
+## Data Sources
+
+- **DW Nominate** (Vote View)  
+- **FEC Data** on Independent Expenditures
+
+
+## Research Design
+
+**Time Periods**
+
+- **Pre-Treatment:** 2000–2010  
+  - Since Super PACs’ independent expenditures were not legal before 2010, we could assign weights to PAC contributions prior to 2010 to make them equivalent.  
+
+- **Treatment:** 2010–2025 (or something)
+
+**Methods**
+
+- **Event-Study Method**  
+  - Take the average each year by Congress.  
+
+- **K-Means Classification**  
+  - Classify groups of Super PACs by *nominate_dim1* / number of independent expenditures / size of independent expenditures of supporting/opposing politicians.  
+  - Helps identify interests or motivations of that Super PAC.
+
+**Population**
+
+- Explore the data to determine whether to exclude freshman representatives.  
+  - Did the “type” of person that seeks office change after 2010?  
+- Focus on the **Senate** (note: could introduce bias).
+
+
+
+[^1]: *DW Nominate* data measures a politician’s ideology based on their tenure. One of the scales, *nominate_dim1*, represents the economic liberal–conservative dimension.  
+Unlike *nominate_dim1*, *nokken_poole_dim1* estimates are calculated separately for each congressional session.  
+(Data access: [VoteView Data](https://voteview.com/data))
